@@ -13,30 +13,38 @@ Description : assignment 1
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- Logo and website name go here -->
-<div id="logo"><img width="12%" src="images/Logo.png" alt="Re:thread">Re:Thread</div>
-<title>Login Page</title>
-</head>
-<div>
-    <!-- Navigation links go here -->
-    <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="login.html">Login</a>
-    </nav>
-    </div>
+    <header>
+        <!-- Logo and website name go here -->
+            <div id="logo" ><img width="12%" src="images/Logo.png" alt="Re-thread"></div>
+            <div class="company-name">
+                Re:thread
+            </div>
+    </header>
+            <div>
+                <!-- Navigation links go here -->
+                <nav>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="products.html" class="nav-link">Products</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="login.html" class="nav-link">Login</a> 
+                </nav>
+            </div>
 <body>
-    <main>
-    <!-- Login Form -->
-    <form action="" method="post">
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required> <br> <br>
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required> <br> <br>
-    <input type="submit" value="Login"> <br> <br>
-    </form>
-    <a id="Signup" href="signup.html">Signup</a>
+   
+    <main class="login-main">
+        <section class="login-form">
+            <form action="#" method="post" id="form-field">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username"> <br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+                <button type="submit" class="login-btn">Login</button>
+                 <p>Don't have an account? <a href="signup.html" class="signup-link">Sign up here</a>.</p>
+            </form>
+           
+        </section>
     </main>
     <footer>
     <!-- Footer contents go here -->

@@ -11,27 +11,30 @@ Description : assignment 1
 <html lang="en">
 <head>
 <!-- Add meta tags, title, and link to styles.css here -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <meta name="E-commerce website" content="E-commerce">
-    <title>Home Page.</title>
+    <title>Re:thread</title>
     
 </head>
 <body>
-    <header>
+<header>
 <!-- Logo and website name go here -->
-    <div id="logo" ><img width="12%" src="images/Logo.png" alt="Re-thread">Re:thread</div>
+    <div id="logo" ><img width="12%" src="images/Logo.png" alt="Re-thread"></div>
+    <div class="company-name">
+        Re:thread
+    </div>
     </header>
     <div>
-<!-- Navigation links go here -->
-    <nav>
-<a href="index.html">Home</a>
-<a href="products.html">Products</a>
-<a href="contact.html">Contact Us</a>
-<a href="login.html">Login</a>
-</nav>
-</div>
+        <!-- Navigation links go here -->
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="login.html" class="nav-link">Login</a> 
+        </nav>
+    </div>
 
-<main>
+<main class="index-main">
 
 <!-- About Us Section -->
 <section class="about-us">
@@ -41,24 +44,25 @@ Description : assignment 1
 <h1 id="vision">Our Vision</h1>
 <p>We aim to make <span>stylish</span> and <span>colourful</span> Clothing from recycled Clothing </p>
 </section>
+
 <section class="shop-now">
     <!-- Shop Now Button (as a link to the Products page) -->
     <a href="products.html"><button>Shop Now</button></a>
 </section>
-    <!-- Customer Reviews/Testimonials Section -->
+
+<!-- Customer Reviews/Testimonials Section -->
 <section class="customer-reviews">
     <!-- Add reviews as needed -->
-    <h1>Reviews</h1>
+    <h1>Customer Reviews</h1>
     <h2>Joel</h2>
-    <p style="padding: 1%;">I recently purchased a red dress from <span id="website_name">Re:thread</span> and I couldn't be happier! 
-        The quality of the fabric is amazing, it's so soft and comfortable to wear.
-         Not to mention, the fit is perfect - it's true to size and really flattering.
-        I've received so many compliments whenever I wear it out.
-        The shipping was also really quick, which was a pleasant surprise.
-         Overall, I highly recommend this product and will definitely be shopping here again in the future!</p>
+    <p >The quality of the fabric is amazing, it's so soft and comfortable to wear.</p>
+    <p class="rating">⭐⭐⭐⭐⭐</p>
+
     <h2> Alex</h2>
     <p>Great quality and fast shipping. 5 Stars!</p>
+    <p class="rating">⭐⭐⭐⭐⭐</p>
 </section>
+
 </main>
 <footer>
     <!-- Copyright notice goes here -->
