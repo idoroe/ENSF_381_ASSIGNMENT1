@@ -89,6 +89,7 @@ button:hover {
 }
 #contact-page{
     border-radius: 10px;
+    width: 100%;
 }
 .contact-method{
     width: 100%;
