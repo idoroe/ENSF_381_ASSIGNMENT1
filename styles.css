@@ -19,11 +19,13 @@
 .logo{
     display: flex;
     float: left;
+    border-radius: 100px;
 }
 .brand-name{
-    display: flex;
-    float: right;
-    justify-content: right;
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    margin: 65px; 
 }
 .nav{
     display: flex;
@@ -84,4 +86,17 @@ button {
 button:hover {
     background-color: #45a049;
     opacity: 1;
+}
+#contact-page{
+    border-radius: 10px;
+}
+.contact-method{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+}
+
+#link:hover{
+    color: #007BFF;
 }
