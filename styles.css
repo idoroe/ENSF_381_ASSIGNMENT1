@@ -23,15 +23,16 @@
     display: flex;
     justify-content: space-around; 
     width: 100%;
-    background-color: #333; 
-    padding: 10px 20px; 
+    background-color: #333;   
 }
 
 .nav a{
     color: white; 
-    text-decoration: none; 
+    text-decoration: none;
+    padding: 10px 20px;  
 }
-.main{
+/* index styling start */
+.about-us{
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
@@ -40,6 +41,31 @@
     align-items: center;
 }
 
+
+/* Shop Now button styling */
+.shop-now button {
+    background-color: #4CAF50; 
+    padding: 10px;
+    border-radius: 5px; 
+    margin: 20px;
+    border: none;
+    color: white; 
+    cursor: pointer; 
+}
+
+/* Customer Review Section styling */
+.customer-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ddd; 
+    padding: 20px;
+    margin: 20px; 
+}
+
+
+
+/* index styling end  */
 #product{
     width: calc(50% - 40px); 
     background-color: #f9f9f9;
@@ -62,3 +88,75 @@
 #add_to_cart{
     text-align: center;
 }
+/* login styles start  */
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+}
+
+.login-form {
+    background-color: #ddd; 
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Styling for form inputs and labels */
+.login-form label {
+    margin: 10px; 
+    display: block; 
+}
+
+#form-field input {
+    background-color: #fff; 
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px; 
+}
+/* Styling for the login button */
+.login-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+    opacity: 1;
+}
+
+.signup-link {
+    color: #007bff;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+/* login styles end  */
+
+/* footer styling start */
+footer {
+    background-color: #333; 
+    padding: 10px;
+    margin: 0;
+    color: white; 
+    text-align: center;
+}
+
+
+/* footer style end  */
