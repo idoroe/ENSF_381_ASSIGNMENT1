@@ -39,14 +39,14 @@
     color: white; 
     text-decoration: none; 
 }
-/* .main{
+.main{
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
     margin: 20px;
     background-color: #ddd;
     align-items: center;
-} */
+}
 
 /* index styling start */
 .about-us{
