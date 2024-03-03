@@ -3,8 +3,8 @@
 Name        : login.html
 Assignment  : Assignment 1
 Author(s)   : Elias Poitras-Whitecalf (30193066), Emmanuel Idoro(30134292)
-Submission  : Febuary 5th, 2024
-Description : assignment 1
+Submission  : March 8th, 2024
+Description : assignment 3
 ========
 -->
 <!DOCTYPE html>
@@ -13,10 +13,13 @@ Description : assignment 1
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+</head>
+<body>
     <div class="wrapper">
         <header class="header">
             <div id="logo">
-                <img width="12%"  src="images/Logo.png" alt="logo"class="logo" >
+                <img width="12%" src="images/Logo.png" alt="logo" class="logo" >
                 <h2 class="brand-name">Re:Thread</h2>
             </div>
         </header> 
@@ -27,27 +30,64 @@ Description : assignment 1
             <a href="login.html">Login</a>
         </nav>
     </div>
-<body>
-   
+
     <main class="login-main">
         <section class="login-form">
-            <form action="#" method="post" id="form-field">
+            <form action="#" method="post" id="form-field" onsubmit="handleLogin(event)">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required placeholder="Enter your username"> <br>
+                <input type="text" id="username" name="username" required placeholder="Enter your username"><br>
 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required placeholder="Enter your password">
 
                 <button type="submit" class="login-btn">Login</button>
-                 <p>Don't have an account? <a href="signup.html" class="signup-link">Sign up here</a>.</p>
+                <p>Don't have an account? <a href="signup.html" class="signup-link">Sign up here</a>.</p>
             </form>
-           
+            <!-- Placeholder for message box -->
         </section>
     </main>
+    <div id="message-box"></div>
     <footer>
-    <!-- Footer contents go here -->
-    <p>&copy; 2024 All rights reserved. -Elias & Emmanuel 2024</p>
+        <p>&copy; 2024 All rights reserved. -Elias & Emmanuel 2024</p>
     </footer>
-    
+
+    <script>
+        function createMessageBox(type, message) {
+            const messageBox = document.getElementById('message-box');
+            messageBox.innerHTML = ''; // Clear the previous message
+            const paragraph = document.createElement('p');
+            paragraph.textContent = message;
+            messageBox.appendChild(paragraph);
+            messageBox.style.border = '2px solid';
+            messageBox.style.backgroundColor = '#f9f9f9';
+            messageBox.style.padding = '10px';
+            messageBox.style.margin = '20px';                
+        }
+
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form submission
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            fetch('https://jsonplaceholder.typicode.com/users')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(users => {
+                    let validUser = users.find(user => user.name === username && user.email === password);
+                    if (validUser) {
+                        createMessageBox('success', 'Login successful!');
+                    } else {
+                        createMessageBox('error', 'Invalid username or useremail. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    alert('API call was unsuccessful: ' + error.message);
+                });
+        }
+    </script>
 </body>
 </html>
