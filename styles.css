@@ -208,14 +208,33 @@ button:hover {
     justify-content: center;
     font-size: 25px;
 }
-.cart-items{
+.cart-item{
     display: flex;
     align-items: center;
-    justify-content: space-;
+    flex-direction: column;
+    
 }
 #cart-contents{
     width: 100%;
     text-align: center;
+    justify-content: center;
+}
+.product {
+    margin-bottom: 20px; 
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-name {
+    margin-bottom: 5px; 
+}
+
+.price {
+    margin-right: 10px; 
 }
 #remove-button:hover{
     background-color: #ff0000;
